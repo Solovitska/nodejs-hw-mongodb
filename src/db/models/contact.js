@@ -6,10 +6,12 @@ const contactsSchema = new Schema(
       type: String,
       required: true,
     },
+
     phoneNumber: {
       type: String,
       required: true,
     },
+
     email: {
       type: String,
       required: false,
@@ -19,14 +21,19 @@ const contactsSchema = new Schema(
       required: true,
       default: false,
     },
+
     contactType: {
       type: String,
       required: true,
-      enum: ['personal', 'work', 'home'],
+      enum: ['work', 'home', 'personal'],
       default: 'personal',
     },
   },
-  { versionKey: false, timestamps: true },
+
+  {
+    timestamps: true,
+    versionKey: false,
+  },
 );
 
-export const Contact = model('Contact', contactsSchema);
+export const ContactsCollection = model('contacts', contactsSchema);
