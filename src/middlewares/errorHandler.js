@@ -1,3 +1,4 @@
+
 import { HttpError } from 'http-errors';
 /* eslint-disable no-unused-vars */
 export const errorHandler = (err, req, res, next) => {
@@ -7,6 +8,7 @@ export const errorHandler = (err, req, res, next) => {
       message: err.name,
       data: err,
     });
+    return;
   }
 
   res.status(500).json({

@@ -37,4 +37,3 @@ responses:
     $ref: '../../../components/responses/204.yaml'
   '500':
     $ref: '../../../components/responses/500.yaml'
-    
