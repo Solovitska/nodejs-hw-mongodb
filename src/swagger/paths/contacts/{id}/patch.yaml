@@ -14,7 +14,7 @@ parameters:
     description: The ID of the contact to update
 requestBody:
   content:
-    application/json:
+    multipart/form-data:
       schema:
         type: object
         properties:
@@ -30,14 +30,18 @@ requestBody:
             description: "Contact's email"
             type: string
             example: 'gennadiy@example.com'
+          isFavourite:
+            description: 'Is contact favorite'
+            type: boolean
+            example: true
           contactType:
             description: "Contact's type"
             type: string
             enum: ['work', 'home', 'personal']
           photo:
-            description: "Link to contact's photo"
+            description: "Contact's photo"
             type: string
-            example: 'https://res.cloudinary.com/uqwgdu/image/upload/image.png'
+            format: binary
 responses:
   '200':
     description: Successfully updated the contact
