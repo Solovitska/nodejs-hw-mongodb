@@ -21,11 +21,11 @@ requestBody:
           phoneNumber:
             description: "Contact's phoneNumber"
             type: string
-            example: 938080221
+            example: '938080221'
           email:
             description: "Contact's email"
             type: string
-            example: gennadiy@example.com
+            example: 'gennadiy@example.com'
           isFavourite:
             description: 'Is contact favorite'
             type: boolean
